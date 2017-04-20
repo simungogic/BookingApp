@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.form-control, .btn{
+    border-radius: 0;
+}
+
+.loginForm{
+    width: 30%;
+    border: solid 5px red;
+    padding: 5%;
+    box-shadow: .3em .3em .4em #888888;
+}
+
+.btn{
+    width: 100%;  
+}
+
+.btn-link{
+    font-size: 1.2em;
+}
+
+.btn-default, .btn-default:hover{
+    background-color: #f47d41;
+    color: white;
+    font-family: Ubuntu;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.input-group{
+    margin-bottom: 5%;
+}
+
+
+.btn-default:hover{
+    opacity: .9;
+}

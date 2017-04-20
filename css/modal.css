@@ -1,0 +1,19 @@
+.modal-content, .modal-body .form-group input{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0 
+}
+
+.fade-scale {
+  transform: scale(0);
+  opacity: 0.5;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+
