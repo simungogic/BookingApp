@@ -1,14 +1,26 @@
-<form method='post' class='addActivityForm'>
-    <input class="form-control activity" name="activity" type="text">
-    <button type="button" class="btn btn-default addActivity" disabled>Postavi</button>
-    <div class="form-group messageActivity">
+<div class="row" id="usluge">
+    <div class="col-lg-4 col-lg-offset-4">
+        <h2 class="title">Usluge</h2>
+        <form method='post' class='addActivityForm'>
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="form-group">
+                    <input class="form-control activity input-lg" name="activity" type="text">
+                </div>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="form-group">
+                    <button type="button" class="btn btn-default form-control addActivity" disabled>Dodaj</button>
+                </div>
+            </div> 
+        </form>
+        <table class="table table-condensed" id="activityList">
+            <thead>
+                <tr>            
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-</form>
-<table class="table table-condensed table-bordered table-hover" id="activityList">
-    <thead>
-        <tr>            
-        </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
+</div>
+<hr>

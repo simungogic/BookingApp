@@ -5,21 +5,34 @@ $(document).on('click', '[class$=accept]', function() {
     var name = $(this).parent().parent().children('.' + rowClass + 'name').text();
     var activity = $(this).parent().parent().children('.' + rowClass + 'activities').text();
     var date = $(this).parent().parent().children('.' + rowClass + 'date').text();
-    var time = $(this).parent().parent().children('.' + rowClass + 'time').text();
+    var dateDatabase = date.split('.');
+    dateDatabase = dateDatabase[2] + '-' + dateDatabase[1] + '-' + dateDatabase[0];
+    var timeBegin = $(this).parent().parent().children('.' + rowClass + 'timeBegin').text();
+    var timeEnd = $(this).parent().parent().children('.' + rowClass + 'timeEnd').text();
     
     $.ajax({
-        dataType: "json",
         type: 'post',
-        data: {bookID : bookID, email: email, name: name, activity: activity, date: date, time: time},
+        data: {bookID : bookID, timeBegin: timeBegin, timeEnd: timeEnd, date: dateDatabase},
         url: 'logic/accept.php',
-        async: false,
         success: function(data) {
-            var parent = $('#' + data).parent().parent();
-            parent.fadeOut("fast", function() {
-                $(this).remove();
-            }); 
-        }
+            if(data != "overlap"){
+               var parent = $('#' + data).parent().parent();
+                parent.fadeOut("fast", function() {
+                    $(this).remove();
+                });  
+            }
+            else{
+                $("#messageModal h4").html("Termin se preklapa s već potvrđenim terminom!");
+                $("#messageModal").modal("show");
+            }
+        }    
     });
+    
+    $.ajax({
+        type: 'post',
+        data: {email: email, name: name, activity: activity, date: date, timeBegin: timeBegin, timeEnd: timeEnd},
+        url: 'logic/acceptmail.php'
+    });   
 });
 
 

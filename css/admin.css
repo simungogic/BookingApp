@@ -1,10 +1,87 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Apr 11, 2017, 3:40:13 PM
-    Author     : Šimun
-*/
+.table{
+    background-color: grey;
+    margin-top: 7%;
+    opacity: .7;
+}
+
+*[class*='accept']{
+    color: green
+}
+
+*[class*='accept']:hover{
+    color: #195601;
+    text-decoration: none;
+}
+
+.table .remove{
+   text-align: center;   
+}
+
+*[class*='deny']{
+    color: red;
+}
+
+*[class*='deny']:hover{
+    color: #750000;
+    text-decoration: none;
+}
+
+.btn:not(.logout):last-child{
+    height: 8%;
+    text-transform: uppercase;
+    background-color: #bc2f2f;
+    transition: background-color 0.5s ease;
+    color: white;
+    font-size: 150%; 
+    border: none;
+    text-transform: uppercase; 
+}
+
+.btn:last-child:hover{
+    background-color: #af0101;
+}
+
+#radno{
+    margin-top: 4%;
+}
+
+.addActivityForm{
+    margin-top: 7%;
+    margin-bottom: 45%;
+}
+.menu a{
+    margin-bottom: 5%;
+    width: 9em;
+    background-color: #bc2f2f;
+    transition: background-color 0.5s ease;
+    border: none;
+    color: white;
+}
+
+#radno .title{
+    margin-top: -2%;
+}
+
+#usluge .title{
+    margin-top: -1%;
+}
+
+#kalendar .title{
+    margin-top: -0.9%;
+}
+
+#calendar{
+    margin-bottom: 10%;
+    background-color: grey;
+    opacity: .8;
+}
+
+
+
+
+
+
+
+
+
 

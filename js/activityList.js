@@ -10,7 +10,7 @@ $(document).ready(function() {
                 $('#activityList tbody').append(
                        '<tr class=' + i + '>\n\
                         <td class=' + i + 'activity></td>\n\
-                        <td><a href=# class=' + i + 'denyActivity>Obriši</a></td>\n\
+                        <td class=remove><a href=# class=' + i + 'denyActivity><span class="glyphicon glyphicon-remove"></span></a></td>\n\
                         </tr>');
             });
 

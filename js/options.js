@@ -6,11 +6,17 @@ $(document).ready(function(){
             type:"POST",
             url: "logic/setWorkingTime.php",
             data:{timePickerStart : $(".timePickerStart").val(), timePickerEnd : $(".timePickerEnd").val()},
-            success:function()
+            success:function(data)
             { 
                 resetTimeForm();
-                $(".messageWorkingTime").addClass('alert alert-success');
-                $(".messageWorkingTime").append("Podešeno radno vrijeme.");
+                if(data == "ok"){
+                    $("#messageModal h4").html("Podešeno radno vrijeme!");
+                    $("#messageModal").modal("show");
+                }else{
+                    $("#messageModal h4").html("Postoje neriješene narudžbe koje su izvan radnog vremena. \n\
+                        Obratite se admin-u baze.");
+                    $("#messageModal").modal("show");
+                }
             }
         });
     });
@@ -26,12 +32,12 @@ $(document).ready(function(){
             { 
                 resetActivityForm();
                 if(data == true){
-                    $(".messageActivity").addClass('alert alert-success');
-                    $(".messageActivity").append("Dodali ste novu aktivnost.");
+                    $("#messageModal h4").html("Dodali ste novu uslugu!");
+                    $("#messageModal").modal("show");
                 }
                 else{
-                    $(".messageActivity").addClass('alert alert-danger');
-                    $(".messageActivity").append("Aktivnost već postoji u bazi!");
+                    $("#messageModal h4").html("Usluga već postoji u bazi!");
+                    $("#messageModal").modal("show");
                 }  
             }
         });
@@ -40,16 +46,11 @@ $(document).ready(function(){
     function resetTimeForm(){
         $('.workingTimeForm')[0].reset();
         $('.clickTimePickerEnd, .setWorkingTime').attr("disabled", true);
-        $('.messageWorkingTime').html('');
-        $('.messageWorkingTime').removeClass('alert alert-success');
     }
     
     function resetActivityForm(){
         $('.addActivityForm')[0].reset();
         $('.addActivity').attr("disabled", true);
-        $('.messageActivity').html('');
-        $(".messageActivity").removeClass('alert alert-danger');
-        $(".messageActivity").removeClass('alert alert-success');
     }
     
     $('.activity').keyup(function(){

@@ -1,9 +1,16 @@
 <?php
 
 require_once '../core/init.php';
+$timePickerStart = Input::get('timePickerStart');
+$timePickerEnd = Input::get('timePickerEnd');
 
 if(Input::exists()){
     $timePicker = new Options();
-    $timePicker->setTime(Input::get('timePickerStart'), Input::get('timePickerEnd'));
-    $timePicker->insertWorkingTime();
+    if($timePicker->checkOrders($timePickerStart, $timePickerEnd)){
+        $timePicker->setTime($timePickerStart, $timePickerEnd);
+        $timePicker->insertWorkingTime();
+        echo "ok";
+    }else{
+        echo "not";
+    }
 }

@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.css.map">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/user.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -20,14 +21,14 @@
     require_once 'core/init.php';
     require_once 'logic/isloggedin.php';
     require_once 'logic/haspermission.php';
-     
     ?>
     <div class="container-fluid">
         <?php 
             require_once 'layouts/headerUser.phtml';
-            require_once 'layouts/userForm.phtml';
-            //require_once 'layouts/about.phtml';
-            //require_once 'layouts/directions.phtml';
+            require_once 'layouts/directions.phtml';
+            require_once 'layouts/userForm.phtml';  
+            require_once 'layouts/footer.phtml';
+            require_once 'layouts/modal.phtml';
         ?>    
     </div>
     <script src="js/activitypicker.js"></script>

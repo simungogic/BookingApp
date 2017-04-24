@@ -1,6 +1,7 @@
 .paging-nav {
     text-align: right;
     padding-top: 2px;
+    margin-bottom: 5%;
 }
 
 .paging-nav a {
@@ -8,13 +9,13 @@
     text-decoration: none;
     display: inline-block;
     padding: 1px 7px;
-    background: #91b9e6;
+    background: #bc2f2f;
     color: white;
     border-radius: 3px;
 }
 
 .paging-nav .selected-page {
-    background: #187ed5;
+    background: #bc2f2f;
     font-weight: bold;
 }
 

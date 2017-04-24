@@ -1,11 +1,6 @@
 $('.timePickerStart, .timePickerEnd').timepicker({
     timeFormat: 'H:i',
-    step: 60,
-});
-
-$('.timePickerStart').timepicker({
-    timeFormat: 'H:i',
-    step: 60,
+    step: 60
 });
 
 $('.clickTimePickerStart').on('click', function(){

@@ -69,15 +69,14 @@ $('.activity').on('change', function(){
 
 $('.set').click(function(){
     resetForm();
-    alert(timeEnd);
     $.ajax({
         async: false,
         type:'post',
         url: 'logic/insertOrder.php',
         data: {activityID : selectedID, timeBegin: timeBegin, timeEnd: timeEnd, date: date},
         success: function() {
-            $('.messageOptions').append('Termin je odabran! Sačekajte potvrdu admin-a.');
-            $('.messageOptions').addClass('alert alert-success');
+            $("#messageModal h4").html("Termin je odabran. Sačekajte admin-a da ga pregleda.");
+            $("#messageModal").modal("show");
         }
     });
 });
@@ -85,9 +84,6 @@ $('.set').click(function(){
 function resetForm(){
     $('.userForm')[0].reset();
     $('.clickTimePicker, .set, .duration, .datePicker').attr("disabled", true);
-    $('.messageOptions').html('');
-    $('.messageOptions').removeClass('alert alert-danger'); 
-    $('.messageOptions').removeClass('alert alert-success'); 
 }
 
 

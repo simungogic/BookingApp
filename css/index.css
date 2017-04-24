@@ -1,37 +1,177 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Bangers');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
-.form-control, .btn{
-    border-radius: 0;
+body{
+    font-family: Comfortaa;
+    background-image: url('../images/street.jpg');
+    background-size:cover;
+    background-attachment: fixed;
 }
 
-.loginForm{
-    width: 30%;
-    border: solid 5px red;
-    padding: 5%;
-    box-shadow: .3em .3em .4em #888888;
+.header{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: white 1px solid;
 }
 
-.btn{
-    width: 100%;  
+.menu{
+    margin-top: 2.5%;
 }
 
-.btn-link{
-    font-size: 1.2em;
-}
-
-.btn-default, .btn-default:hover{
-    background-color: #f47d41;
+.menu a{
+    margin-bottom: 5%;
+    width: 7em;
+    background-color: #bc2f2f;
+    transition: background-color 0.5s ease;
+    border: none;
     color: white;
-    font-family: Ubuntu;
-    font-size: 1.5em;
-    text-transform: uppercase;
 }
 
-.input-group{
+#photo{
+    border-radius: 50%;
+    height: 30%;
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+}
+
+#image-wrapper{
     margin-bottom: 5%;
 }
 
-
-.btn-default:hover{
-    opacity: .9;
+.title{
+    text-align: center;
+    color: white;
+    margin-bottom: 1em
 }
+
+.table h4{
+    text-align: center;
+}
+
+h4#about{
+    color: white;
+    line-height: 2em
+}
+
+.menu a:hover{
+    background-color: #af0101;
+    color: white;
+}
+
+table{
+    color: white;
+}
+
+.descr{
+    text-align: center;
+    color: white;
+}
+
+.loginForm{
+    margin-top: 15%
+}
+
+.input-lg, .btn{
+    border-radius: 0;
+}
+
+.input-group > .input-lg:focus{
+    box-shadow: 0 0 .2em blue;
+}
+
+.btn.login{
+    background-color: #bc2f2f;
+    transition: background-color 0.5s ease;
+    color: white;
+    font-size: 150%; 
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn-link{
+    font-size: 110%;
+    color: white !important;
+}
+
+.btn.login:hover{
+    background-color: #af0101;
+}
+
+.btn.login:active{
+    color: white;
+}
+
+.input-group{
+    margin: 0 auto;
+    margin-bottom: 2%;
+    width: 70%
+}
+
+.tooltip-inner {
+    background-color: #cc0000;
+    color: white;
+    width: 100em;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #cc0000;
+}
+
+footer > .row{
+    color: white;
+    background-color: black;
+    height: 25%;
+}
+
+footer > .prava{
+    height: 10%
+}
+
+footer h5, footer h4{
+    color: grey;
+    text-align: center;    
+}
+
+footer h4{
+    color: white;
+}
+
+#activate{
+    border: black solid 1px; 
+    background-color: white;
+    opacity: .7;
+    text-align: center; 
+    position: absolute; 
+    top: 20%;
+    padding: 5% 0;
+    border-radius: 4%;
+}
+
+#messageModal h4{
+    text-align: center;
+}
+
+#messageModal .modal-content{
+    border-radius: 0 !important;
+}
+
+#messageModal .modal-dialog{
+    width: 25%;
+}
+
+.modal {
+    overflow-y: auto;
+    z-index: 5000;
+}
+
+.modal-open {
+    overflow-y: auto;
+    padding-right: 0 !important;
+}
+
+input{
+    border-radius: 0;
+}
+
+
+

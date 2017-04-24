@@ -1,21 +1,34 @@
-<form method='post' class='userForm'>
-    <select class="form-control activity" name="activity" type="text">
-        <option disabled selected value> -- odaberite aktivnost -- </option>
-    </select>
-    <input class="form-control datePicker" name="datePicker" type="text" disabled readonly="true">
-    <input class="form-control actualDate hidden" name="actualDate" type="text">
-    <button type="button" class="btn btn-default clickTimePicker" disabled>Odaberi termin</button>
-    <input class="form-control timePicker" name="timePicker" type="text" disabled>
-    <select class="form-control duration" name="duration" type="text" disabled>
-        <option disabled selected value> -- odaberite trajanje -- </option>
-        <option value="30" class="29">00:30</option>
-        <option value="60" class="59">01:00</option>
-        <option value="90" class="89">01:30</option>
-        <option value="120" class="119">02:00</option>
-    </select>
-    <button type="button" class="btn btn-default set" disabled>Naruči se</button>
-    <div class="form-group messageOptions">
+<div class="row" id="userForm">
+    <div class="col-lg-4 col-lg-offset-4">
+        <h2 class="title">Naruči se</h2>
+        <form method='post' class='userForm'>
+            <div class="form-group">
+                <select class="form-control activity input-lg" name="activity" type="text">
+                    <option disabled selected value> -- odaberite aktivnost -- </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input class="form-control datePicker input-lg" placeholder="-- odaberite datum --" name="datePicker" type="text" disabled readonly="true">
+                <input class="form-control actualDate hidden" name="actualDate" type="text">
+            </div>
+            <div class="form-group">
+                <input type="button" class="btn btn-default clickTimePicker form-control" value="Odaberite termin" disabled>
+                <input class="form-control timePicker input-lg" name="timePicker" type="text" disabled>
+            </div>
+            <div class="form-group">
+                <select class="form-control duration input-lg" name="duration" type="text" disabled>
+                    <option disabled selected value> -- odaberite trajanje -- </option>
+                    <option value="30" class="29">00:30</option>
+                    <option value="60" class="59">01:00</option>
+                    <option value="90" class="89">01:30</option>
+                    <option value="120" class="119">02:00</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="button" class="form-control btn btn-lg btn-default set" disabled>Naruči se</button>
+            </div>   
+        </form>
     </div>
-</form>
+</div>
 
 

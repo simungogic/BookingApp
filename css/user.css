@@ -1,10 +1,60 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Apr 11, 2017, 3:40:08 PM
-    Author     : Šimun
-*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+#upute{
+    font-family: Playfair Display;
+    letter-spacing: .1em;
+    color: white;
+}
+
+#upute h4{
+    margin-top: 2%;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #af0101;
+}
+
+#upute li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5em
+}
+
+#userForm{
+    margin-bottom: 5%;
+}
+
+#userForm .btn:not(.clickTimePicker){
+    height: 8%;
+    text-transform: uppercase;
+    background-color: #bc2f2f;
+    transition: background-color 0.5s ease;
+    color: white;
+    font-size: 150%; 
+    border: none;
+    text-transform: uppercase; 
+}
+
+#userForm .btn:not(.clickTimePicker):hover{
+    background-color: #af0101;
+}
+
+.btn:not(.logout):last-child{
+    height: 8%;
+    text-transform: uppercase;
+    background-color: #bc2f2f;
+    transition: background-color 0.5s ease;
+    color: white;
+    font-size: 150%; 
+    border: none;
+    text-transform: uppercase; 
+}
+
+.btn:last-child:hover{
+    background-color: #af0101;
+}
+
+
+
+
 

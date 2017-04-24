@@ -8,7 +8,6 @@ if(Input::exists())
         'name' => array(
             'name' => 'Ime i prezime',
             'required' => true,
-            'max' => 50 
         ),
         'oib' => array(
             'name' => 'OIB',
@@ -31,16 +30,16 @@ if(Input::exists())
         'email' => array(
             'name' => 'Email',
             'required' => true,
-            'max' => 50,
             'regex' => true,
             'unique' => true
         )
     ));
-
+    
     if($validate->passed()){
         $user = new User();
         $email = new Email();
         $emailCode = md5(Input::get('name').microtime());
+        $validate->setEmailData(Input::get('email'), $emailCode, Input::get('name'));
         try{
             $user->create(array(
                    Input::get('name'), 
@@ -49,20 +48,12 @@ if(Input::exists())
                    Hash::make(Input::get('password')),
                    $emailCode
                )); 
-            
-            $email->addAdress(Input::get('email'))->setSubject('E-mail potvrda')
-                    ->setBody("Pozdrav ".Input::get('name'). ",\n\npotvrdite Vaš korisnički račun klikom na link u nastavku:\n\n"
-                            . "http://localhost:82/Booking/logic/activate.php?email=".Input::get('email')."&emailCode=".$emailCode)
-                    ->send();
         } catch (InsertException $ex) {
             $validate->addError($ex->getMessage());
         } 
-        catch(EmailException $ex){
-            $validate->addError($ex->getMessage());
-        }
 }
 
-    echo json_encode($validate->getMessages());
+    echo json_encode(array_merge($validate->getMessages(), $validate->getEmailData()));
 }
 
 

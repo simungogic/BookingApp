@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Booking/layouts/loginForm.phtml</file>
-            <file>file:/C:/xampp/htdocs/Booking/css/index.css</file>
-            <file>file:/C:/xampp/htdocs/Booking/layouts/registerForm.phtml</file>
+            <file>file:/C:/xampp/htdocs/Booking/js/activityList.js</file>
+            <file>file:/C:/xampp/htdocs/Booking/user.php</file>
+            <file>file:/C:/xampp/htdocs/Booking/css/admin.css</file>
+            <file>file:/C:/xampp/htdocs/Booking/admin.php</file>
         </group>
     </open-files>
 </project-private>

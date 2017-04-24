@@ -1,14 +1,24 @@
 .modal-content, .modal-body .form-group input{
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0 
+    border-radius: 0;
+}
+
+.modal-dialog{
+    width: 30%
+}
+
+.modal-body > .form-group{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 3%
+}
+
+.modal-body > .form-group > input:focus{
+    box-shadow: 0 0 .2em blue;
 }
 
 .fade-scale {
-  transform: scale(0);
+  transform: scale(.7);
   opacity: 0.5;
-  -webkit-transition: all .25s linear;
-  -o-transition: all .25s linear;
   transition: all .25s linear;
 }
 
@@ -16,4 +26,43 @@
   opacity: 1;
   transform: scale(1);
 }
+
+.tooltip-inner {
+    background-color: #cc0000;
+    color: white;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #cc0000;
+}
+
+.form-group .btn-block{
+    background-color: #bc2f2f;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    transition: background-color 0.5s ease;
+}
+
+.form-group .btn-block:hover{
+    background-color: #af0101;
+}
+
+.form-group .btn-block:active{
+    color: white;
+}
+
+.registerForm .modal-content{
+    background-color: rgba(235, 235, 235, .9);
+}
+
+.modal-header{
+    border-bottom: black solid 1px;
+}
+
+.message{
+    text-align: center;
+}
+
+
 

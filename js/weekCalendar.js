@@ -34,11 +34,17 @@ $(document).ready(function() {
         allDaySlot: false,
         minTime: startTime,
         maxTime: endTime,
+        eventColor: '#bc2f2f',
         contentHeight: 'auto',
+        chart: { 
+            type: 'column',
+            backgroundColor: 'transparent'
+        },
         header: { right: 'prev, next' },
         events: events,
         eventClick: function(calEvent) {
-            alert(calEvent.title);
+            $("#messageModal h4").html(calEvent.title);
+            $("#messageModal").modal("show");
         }
     })
     

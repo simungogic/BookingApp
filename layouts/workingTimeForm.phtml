@@ -1,11 +1,21 @@
-<form method='post' class='workingTimeForm'>
-    <button type="button" class="btn btn-default clickTimePickerStart">Početak radnog vremena</button>
-    <input class="form-control timePickerStart" name="timePickerStart" type="text" disabled>
-    <button type="button" class="btn btn-default clickTimePickerEnd" disabled>Kraj radnog vremena</button>
-    <input class="form-control timePickerEnd" name="timePickerEnd" type="text" disabled>
-    <button type="button" class="btn btn-default setWorkingTime" disabled>Postavi</button>
-    <div class="form-group messageWorkingTime">
-    </div>
-</form>
+<div class="row" id="radno">
+    <h2 class="title">Radno vrijeme</h2>
+    <div class="col-lg-2 col-lg-offset-5">
+        <form method='post' class='workingTimeForm'>
+            <div class="form-group">
+                <button type="button" class="btn btn-default clickTimePickerStart form-control">Početak</button>
+                <input class="form-control timePickerStart input-lg" name="timePickerStart" type="text" disabled>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default clickTimePickerEnd form-control" disabled>Kraj</button>
+                <input class="form-control timePickerEnd input-lg" name="timePickerEnd" type="text" disabled>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default setWorkingTime form-control" disabled>Postavi</button>
+            </div>  
+        </form>
+    </div>  
+</div>
+<hr>
 
 

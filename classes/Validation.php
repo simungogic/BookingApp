@@ -3,6 +3,7 @@
 class Validation{
     private $_passed = false,
             $_messages = array('errorRegister' => array(), 'inputNames' => array()),
+            $_emailData = array('email' => '', 'emailCode' => '', 'name' => ''),
             $_db = null;
             
     public function __construct() {
@@ -63,6 +64,16 @@ class Validation{
     
     private function addInputName($name){
         $this->_messages['inputNames'][] = $name;
+    }
+    
+    public function getEmailData(){
+        return $this->_emailData;
+    }
+    
+    public function setEmailData($email, $emailCode, $name) {
+        $this->_emailData['email'] = $email;
+        $this->_emailData['emailCode'] = $emailCode;
+        $this->_emailData['name'] = $name;
     }
     
     public function getMessages(){

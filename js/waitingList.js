@@ -12,10 +12,11 @@ $(document).ready(function() {
                         <td class=' + i + 'name></td>\n\
                         <td class=' + i + 'activities></td>\n\
                         <td class=' + i + 'date></td>\n\
-                        <td class=' + i + 'time></td>\n\
-                        \n\<td class=' + i + 'email style=display:none></td>\n\
-                        <td><a href=# class=' + i + 'accept>Prihvati</a></td>\n\
-                        <td><a href=# class=' + i + 'deny>Odbij</a></td>\n\
+                        <td class=' + i + 'timeBegin></td>\n\
+                        <td class=' + i + 'timeEnd></td>\n\
+                        <td class=' + i + 'email style=display:none></td>\n\
+                        <td><a href=# class=' + i + 'accept><span class="glyphicon glyphicon-ok"></span></a></td>\n\
+                        <td><a href=# class=' + i + 'deny><span class="glyphicon glyphicon-remove"></span></a></td>\n\
                         </tr>');
             });
 
@@ -32,7 +33,11 @@ $(document).ready(function() {
             });
 
             $.each(array.timeBegin, function(i, item) {
-                $('.' + i + 'time').text(item);
+                $('.' + i + 'timeBegin').text(item);
+            });
+            
+            $.each(array.timeEnd, function(i, item) {
+                $('.' + i + 'timeEnd').text(item);
             });
 
             $.each(array.bookID, function(i, item) {

@@ -10,6 +10,18 @@ class Options {
         $this->_db = Database::getInstance();
     }
     
+    public function checkOrders($startTime, $endTime){
+        $count = Database::getInstance()->query("SELECT * FROM Book WHERE Date > NOW()"
+                . "AND Validated=? AND Valid=? AND (? > TimeBegin OR ? < TimeEnd)",
+                array(1, 1, $startTime, $endTime))->count();
+        
+        if($count>0){
+            return false;
+        }
+        
+        return true;
+    }
+    
     public function setActivity($activity){
         $this->_activity = $activity;
     }

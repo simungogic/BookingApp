@@ -8,10 +8,16 @@ $(document).on('click', '[class$=denyActivity]', function(e) {
         url: 'logic/denyActivity.php',
         async: false,
         success: function(data) {
-            var parent = $('#' + data).parent().parent();
-            parent.fadeOut("fast", function() {
-                $(this).remove();
-            }); 
+            if(data != "key"){
+                var parent = $('#' + data).parent().parent();
+                parent.fadeOut("fast", function() {
+                    $(this).remove();
+                }); 
+            }
+            else{
+                $("#messageModal h4").html("Za ovu uslugu postoje narudžbe! Obratite se adminu baze.");
+                $("#messageModal").modal("show");
+            }      
         }
     });
 });
